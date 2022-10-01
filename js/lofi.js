@@ -176,10 +176,11 @@ function prevSong() {
 		rand -= 1;
 	}
 	checkPrivateBack();
-	player.loadVideoById({videoId:listVid[rand].idVid});
+	var id = listVid[rand].idVid;
+	player.loadVideoById({ videoId: id });
 	para.innerHTML = listVid[rand].title;
-	musicPlayer.style.backgroundImage = `url('https://source.unsplash.com/random/600*250/?landscape${rand}')`;
-	bg.style.backgroundImage = `url('https://source.unsplash.com/random/600*250/?landscape${rand}')`;
+	musicPlayer.style.backgroundImage = `url('https://i3.ytimg.com/vi/${id}/maxresdefault.jpg')`;
+	bg.style.backgroundImage = `url('https://i3.ytimg.com/vi/${id}/maxresdefault.jpg')`;
 	playButton(true);			
 }
 
